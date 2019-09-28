@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <title>Not Found</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        font-family: 'Muli', sans-serif;
+    }
+    .header{
+        background-color: #21C08B;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 80px;
+    }
+    .header__img {
+        width: 200px;
+        margin-left: 10px;
+    }
+
+    .notFound {
+        width: 100%;    
+        min-height: calc(100vh - 180px);        
+        background: linear-gradient(#21C08B,#8F57FD);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        white-space: 20px;
+        justify-content: center;
+    }
+    .notFound__title{
+        color: white;
+        font-size: 50px;
+        margin: 0px;
+    }
+    .animated {
+        animation-duration: 2s;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+    }
+    @keyframes wobble {
+       0% {transform: translateX(0%);}
+       15% {transform: translateX(-25%) rotate(-5deg);}
+       30% {transform: translateX(20%) rotate(3deg);}
+       45% {transform: translateX(-15%) rotate(-3deg);}
+       60% {transform: translateX(10%) rotate(2deg);}
+       75% {transform: translateX(-5%) rotate(-1deg);}
+       100% {transform: translateX(0%);}
+
+    }
+    .wobble-text {
+        animation-name: wobble;
+    }
+
+    .notFound__description {
+        color: white;
+        margin: 0px;
+    }
+
+    .footer{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: #8F57FD;
+    }
+    .footer a {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 14px;
+        padding-left: 30px;
+    }
+    .footer a:hover {
+        text-decoration: underline;
+    }
+
+
+</style>
+<body>
+    <header>
+        <header class="header">
+            <img class="header__img" src="../assets/logo-platzi-video-BW2.png" alt="Logo de Platzi Video">
+        </header>
+    </header>
+
+    <section class="notFound">
+        <p class="notFound__title wobble-text animated">404</p>
+        <p class="notFound__description">Pagina no encontrada</p>
+    </section>
+
+    <footer class="footer">
+        <a href="/">Términos de uso</a>
+        <a href="/">Declaración de privacidad</a>
+        <a href="/">Centro de ayuda</a>
+    </footer>
+</body>
+</html>
